@@ -20,24 +20,113 @@
 </head>
 <body>
     <header>
-        <div class="header-item">
-            <a class="header-logo" href="#"></a>
-            <div class="header-burger">
-                <button class="burger" onclick="openModal()"></button>
+        <div class="container">
+            <div class="header">
+                <div class="header-item">
+                    <a class="logo" href="#"></a>
+                    <div class="header-burger">
+                        <button class="burger" onclick="openModal()"></button>
+                    </div>
+                    <nav class="header-nav">
+                        <ul class="header-nav-list">
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="img/instagram.svg" alt="inst"></a>
+                    <a href="#"><img src="img/fb.svg" alt="fb"></a>
+                </div>
             </div>
-            <nav>
-                <ul class="header-nav">
-                    <li><a href="#">Мероприятия</a></li>
-                    <li><a href="#">Расписание</a></li>
-                    <li><a href="#">О компании</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="social-icons">
-            <a href="#"><img src="img/instagram.svg" alt="inst"></a>
-            <a href="#"><img src="img/fb.svg" alt="fb"></a>
         </div>
     </header>
+    <main>
+        <section class="form">
+            <div class="container">
+                <div class="email-design">
+                    <h2>Подпишитесь на рассылку</h2>
+                    <span class="fotm-ellipse"></span>
+                </div>
+                <form class="form-item">
+                    <input class="form-email" type="email" placeholder="Ваш e-mail">
+                    <label class="checkbox">
+                        <input class="check" type="checkbox">
+                        <div class="checkmark">
+                            <img src="img/vector.svg">
+                        </div>
+                        Согласен с обработкой<a href="#">персональных данных</a>
+                    </label>
+                    <button class="btn form-button" type="submit">подписаться</button>
+                </form>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-main">
+                        <h2>О компании</h2>
+                        <p class="about-description">Наша компания является одной из&nbsp;немногих, кто&nbsp;предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и&nbsp;вы сами увидите, что&nbsp;мы проводим не&nbsp;только онлайн-тренировки.</p>
+                        <a href="#" class="btn about-btn">записаться</a>
+                    </div>
+                    <div class="about-banner"></div>
+                    <div class="about-table">
+                        <div class="about-item">
+                            <h4>Экономия времени</h4>
+                            <p>Не&nbsp;нужно тратить время на&nbsp;дорогу</p>
+                        </div>
+                        <div class="about-item">
+                            <h4>Индивидуальный подход</h4>
+                            <p>Внимание тренера пренадлежит только&nbsp;вам</p>
+                        </div>
+                        <div class="about-item">
+                            <h4>Экономия денег</h4>
+                            <p>Средняя цена одной тренировки&nbsp;-&nbsp;700₽</p>
+                        </div>
+                        <div class="about-item">
+                            <h4>Опытный персонал</h4>
+                            <p>Стаж работы у&nbsp;наших тренеров от&nbsp;5&nbsp;лет</p>
+                        </div>
+                    </div>
+                    <a href="#" id="aboutMobBtn" class="btn about-btn">записаться</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div class="footer-item">
+                    <a class="logo" href="#"></a>
+                    <nav class="footer-nav">
+                        <ul class="footer-nav-list">
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="external-links">
+                    <span class="email-design">
+                        <a class="footer-email" href="mailto:info@freefit.com">info@freefit.com</a>
+                        <span class="ellipse"></span>
+                    </span>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/instagram.svg" alt="inst"></a>
+                        <a href="#"><img src="img/fb.svg" alt="fb"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2020, Все права защищены</p>
+                <p>
+                    <span>Сделано в рамках курса учебной платформы</span>
+                    <a href="https://annblok.ru/" target="_blank">Annblok</a>
+                </p>
+            </div>
+        </div>
+    </footer>
     <div id="modal" class="modal">
         <a class="header-logo" href="#"></a>
         <ul class="header-nav">
@@ -52,12 +141,12 @@
         <button class="burger-close" onclick="closeModal()"></button>
     </div>
     <script>
+
         //    Menu
 
         function openModal() {
             document.getElementById("modal").style.top = "0px";
         }
-
         function closeModal() {
             document.getElementById("modal").style.top = "-500px";
         }
