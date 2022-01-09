@@ -190,7 +190,7 @@
                     <input class="form-email" type="email" placeholder="Ваш e-mail">
                     <!-- <p class="input-error" >Некорректный адрес e-mail</p> -->
                     <div class="agreement">
-                        <input class="checkbox" type="checkbox" id="01" required/>
+                        <input class="checkbox" type="checkbox" id="01">
                         <label for="01">
                         Согласен с обработкой
                         <a class="agreement-link" href="#">персональных данных</a>
@@ -275,19 +275,19 @@
             <a href="#"><img src="img/instagram.svg" alt="inst"></a>
             <a href="#"><img src="img/fb.svg" alt="fb"></a>
         </div>
-        <button class="burger-close" onclick="closeModal()"></button>
+        <button class="burger-close close" onclick="closeModal()"></button>
     </div>
     <div class="popup-bg">
         <div class="popup">
             <h3>Заявка на участие «Марафон выносливости»</h3>
             <p>Заполните все поля, и&nbsp;мы пришлем информацию в&nbsp;ближайшее время</p>
             <form class="form-popup" action="">
-            <input class="form-email" type="email" placeholder="Ваш e-mail">
-            <input class="form-email" type="tel" placeholder="Ваш номер телефона">
+                <input class="form-email" type="email" placeholder="Ваш e-mail">
+                <input class="form-tel" type="tel" placeholder="Ваш номер телефона">
             <!-- <p class="input-error" >Некорректный адрес e-mail</p> -->
-            <button class="btn form-button" type="submit">подписаться</button>
-        </form>
-        <button class="close-popup"></button>
+                <button class="btn form-button" type="submit">подписаться</button>
+            </form>
+        <button class="close-popup close"></button>
         </div>
     </div>
     <script src="js/main.js"></script>
