@@ -720,6 +720,7 @@ footer .social-icons img {
 }
 
 /* adaptive */
+
 @media (min-width:540px) {
     #aboutMobBtn {
         display: none;
