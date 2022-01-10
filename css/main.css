@@ -390,6 +390,22 @@ input {
 input:focus {
     outline: none;
 }
+input::-webkit-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+    font-size: 18px;
+}
+input::-moz-placeholder {
+    color: rgba(43, 53, 65, .3);
+    font-size: 18px;
+}
+input:-ms-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+    font-size: 18px;
+}
+input::-ms-input-placeholder {
+    color: rgba(43, 53, 65, .3);
+    font-size: 18px;
+}
 input::placeholder {
     color: rgba(43, 53, 65, .3);
     font-size: 18px;
@@ -816,7 +832,8 @@ footer .social-icons img {
         height: 93.5vw;
     }
     .about-grid {
-        column-gap: 40px;
+        -moz-column-gap: 40px;
+             column-gap: 40px;
     }
     .footer-flex {
         flex-direction: column;
@@ -1155,4 +1172,4 @@ footer .social-icons img {
         flex-direction: column;
         gap: 10px;
     }
-}
+}}
