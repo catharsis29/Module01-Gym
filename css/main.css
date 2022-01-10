@@ -930,14 +930,17 @@ footer .social-icons img {
     }
     .table-item {
         padding: 22px 19px 13px 19px;
-        height: 76px;
+        max-height: 114px;
+    }
+    .table-item:hover {
+        max-height: 158px;
     }
     .table-item span {
         font-size: 16px;
         margin-bottom: 13px;
     }
     #bg-gradient {
-        height: 172px;
+        max-height: 172px;
     }
     #bg-gradient span {
         margin-bottom: 59px;
@@ -993,9 +996,21 @@ footer .social-icons img {
         width: 100%;
         padding: 40px 10px;
     }
+    .popup h3 {
+        font-size: 16px;
+        max-width: 230px;
+        margin: 0 auto;
+    }
+    .popup h3::before {
+        width: 31px;
+        height: 31px;
+        bottom: 27px;
+        left: 20px;
+    }
     .popup p {
-        margin-top: 16px;
-        margin-bottom: 28px;
+        font-size: 16px;
+        max-width: 230px;
+        margin: 16px auto 28px;
     }
     .popup .form-button {
         margin-top: 20px;
