@@ -765,13 +765,29 @@ footer .social-icons img {
         margin-bottom: 220px;
     }
 }
-@media (max-width: 1112px) {
+@media (max-width: 1111px) {
     .header-item {
         flex-basis: content;
         gap: 57px;
     }
     .banner-text-item {
         margin-left: 0;
+    }
+    .btn-mobile {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #FBF138;
+        font-size: 30px;
+        line-height: 1;
+        padding: 0 7px;
+        background-color: #2B3541;
+    }
+    .event-type {
+        right: auto;
+        left: 0;
+        padding: 9px 15px;
     }
     .table-item-desc {
         font-size: 12px;
@@ -1057,22 +1073,6 @@ footer .social-icons img {
     }
     .event-btn {
         display: none;
-    }
-    .btn-mobile {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        color: #FBF138;
-        font-size: 30px;
-        line-height: 1;
-        padding: 0 7px;
-        background-color: #2B3541;
-    }
-    .event-type {
-        right: auto;
-        left: 0;
-        padding: 9px 15px;
     }
     .form-item {
         display: flex;
