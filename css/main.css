@@ -353,7 +353,7 @@ h3 {
     background-color: #F3F3F3;
     padding-top: 90px;
     padding-bottom: 83px;
-    margin-bottom: 161px;
+    margin-bottom: 81px;
 }
 .form h2 {
     display: inline-block;
@@ -465,7 +465,9 @@ label {
     color: rgba(43, 53, 65, 1);
 }
 .about {
-    margin-bottom: 168px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 88px;
 }
 .about-grid {
     display: grid;
@@ -1007,7 +1009,9 @@ footer .social-icons img {
         text-align: start;
     }
     .about {
-        margin-bottom: 34px;
+        margin-bottom: 14px;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
     .about-grid {
         row-gap: 50px;
@@ -1023,7 +1027,7 @@ footer .social-icons img {
         font-size: 16px;
     }
     .form {
-        margin-bottom: 80px;
+        margin-bottom: 40px;
         padding-top: 53px;
         padding-bottom: 40px;
     }
