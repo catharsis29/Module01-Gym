@@ -297,7 +297,7 @@ h3 {
 .table-item {
     font-size: 18px;
     border: 1px solid rgba(43, 53, 65, .5);
-    padding: 22px 29px 19px 29px;
+    padding: 22px 29px 4px 29px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -314,22 +314,20 @@ h3 {
     opacity: .7;
 }
 .table-item h4 {
-    margin-top: 64px;
     font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 .table-item-desc {
     font-size: 18px;
     overflow: hidden;
     max-height: 0;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     margin-top: 0;
     line-height: 1.5;
     transition: max-height 0.3s;
 }
 .table-item:hover .table-item-desc {
-    margin-top: 15px;
     max-height: 306px;
 }
 #bg-gradient {
@@ -356,8 +354,8 @@ h3 {
     margin-bottom: 81px;
 }
 .form h2 {
-    display: inline-block;
-    margin-bottom: 46px;
+    display: initial;
+    /* margin-bottom: 46px; */
     line-height: 32px;
     position: relative;
     z-index: 1;
@@ -369,8 +367,8 @@ h3 {
     position: absolute;
     width: 53px;
     height: 53px;
-    bottom: 10px;
-    left: -34px;
+    top: -19px;
+    left: -22px;
     z-index: -1;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
@@ -381,6 +379,7 @@ h3 {
     gap: 13px 20px;
     justify-items: start;
     margin: 0 auto;
+    margin-top: 46px;
 }
 input {
     justify-self:stretch;
@@ -829,15 +828,10 @@ footer .social-icons img {
         max-width: 581px;
         height: 621px;
     }
-}
-@media (max-width: 1000px) {
     .events-box {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-    }
-    .event-item {
-        height: 50vw;
     }
     .event-description {
         padding-top: 19px;
@@ -846,10 +840,8 @@ footer .social-icons img {
     .event-description h3 {
         max-width: 200px;
     }
-
     .event3 {
         grid-column: 1 / 3;
-        height: 93.5vw;
     }
     .about-grid {
         -moz-column-gap: 40px;
@@ -903,6 +895,14 @@ footer .social-icons img {
     .events-heading {
         margin-bottom: 22px;
     }
+    .table {
+        margin-bottom: 80px;
+    }
+    .about {
+        margin-bottom: 14px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
 }
 @media (max-width: 767px) {
     .banner-text-item a {
@@ -915,6 +915,7 @@ footer .social-icons img {
     h1 {
         font-size: 26px;
         text-align: start;
+        letter-spacing: 0.022em;
     }
     .banner-text-item p {
         max-width: 255px;
@@ -944,8 +945,25 @@ footer .social-icons img {
     .events-box {
         margin-bottom: 80px;
     }
-    .table {
-        margin-bottom: 80px;
+    .event-item {
+        height: 310px;
+    }
+    .event3 {
+        height: 336px;
+    }
+    .event-date {
+        font-size: 12px;
+    }
+    .event-description h3 {
+        margin-top: 15px;
+        font-size: 16px;
+        max-width: 117px;
+    }
+    .event-type {
+        font-size: 12px;
+    }
+    .event-btn {
+        display: none;
     }
     .table-heading {
         margin-bottom: 19px;
@@ -996,22 +1014,30 @@ footer .social-icons img {
         margin-top: 0;
         font-size: 16px;
     }
+    .form {
+        margin-bottom: 40px;
+        padding-top: 53px;
+        padding-bottom: 40px;
+    }
     .form-item {
         gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100%;
     }
     .form h2::before {
         width: 31px;
         height: 31px;
-        bottom: 14px;
-        left: -14px;
+    }
+    .form-email {
+        padding: 24px;
+    }
+    .form-button {
+        margin-top: 34px;
     }
     .agreement {
         text-align: start;
-    }
-    .about {
-        margin-bottom: 14px;
-        padding-top: 40px;
-        padding-bottom: 20px;
     }
     .about-grid {
         row-gap: 50px;
@@ -1026,10 +1052,49 @@ footer .social-icons img {
     .about-table p {
         font-size: 16px;
     }
-    .form {
+    footer {
+        background-color: white;
+    }
+    footer .logo {
+        width: 97px;
+        height: 30px;
+    }
+    .footer-flex {
         margin-bottom: 40px;
-        padding-top: 53px;
-        padding-bottom: 40px;
+    }
+    .footer-item {
+        flex-direction: column;
+        gap: 41px;
+    }
+    .footer-email {
+        font-size: 12px;
+    }
+    .footer-nav {
+        width: 100%;
+    }
+    .footer-nav-list {
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .footer-nav a {
+        font-size: 12px;
+    }
+    .footer-ellipse::before {
+        width: 20px;
+        height: 20px;
+        bottom: 5px;
+        right: 98px;
+    }
+    .footer-other {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+    .footer-other {
+        font-size: 10px;
+    }
+    .footer-desc a {
+        font-size: 10px;
     }
     .popup {
         box-sizing:border-box;
@@ -1053,80 +1118,7 @@ footer .social-icons img {
         margin: 16px auto 28px;
     }
     .popup .form-button {
-        margin-top: 20px;
-}
-@media (max-width:666px) {
-    h1 {
-    letter-spacing: 0.022em;
-    }
-    .event-item {
-        height: 86vw;
-    }
-    .event3 {
-        height: 93.5vw;
-    }
-    .event-date {
-        font-size: 12px;
-    }
-    .event-description h3 {
-        margin-top: 15px;
-        font-size: 16px;
-        max-width: 117px;
-    }
-    .event-type {
-        font-size: 12px;
-    }
-    .event-btn {
-        display: none;
-    }
-    .form-item {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        max-width: 100%;
-    }
-    .form-button {
-        margin-top: 34px;
-    }
-    footer {
-        background-color: white;
-    }
-    footer .logo {
-        width: 97px;
-        height: 30px;
-    }
-    .footer-flex {
-        margin-bottom: 40px;
-    }
-    .footer-item {
-        flex-direction: column;
-        gap: 41px;
-    }
-    .footer-email {
-        font-size: 12px;
-    }
-    .footer-nav-list {
-        gap: 49px;
-    }
-    .footer-nav a {
-        font-size: 12px;
-    }
-    .footer-ellipse::before {
-        width: 20px;
-        height: 20px;
-        bottom: 5px;
-        right: 98px;
-    }
-    .footer-other {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-    }
-    .footer-other {
-        font-size: 10px;
-    }
-    .footer-desc a {
-        font-size: 10px;
+        margin-top: 20px;  
     }
 }
 @media (max-width:540px) {
@@ -1161,21 +1153,3 @@ footer .social-icons img {
         order: 1;
     }
 }
-@media (max-width:400px) {
-    .form h2::before {
-        bottom: 47px;
-        left: 56px;
-    }
-    .form h2 {
-        margin-bottom: 50px;
-    }
-    .form-email {
-        padding: 24px;
-    }
-}
-@media (max-width:359px) {
-    .footer-nav-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-}}
