@@ -36,14 +36,14 @@ h2 {
     font-weight: 700;
     font-size: 16px;
     background-color: #FBF138;
-    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.2);
+    box-shadow: 0 13px 24px rgba(251, 241, 56, 0.2);
     text-transform: uppercase;
-    transition: 0.4s;
+    transition: .4s;
 }
 .btn:hover {
     background-color: #2B3541;
     color: #FBF138;
-    box-shadow: 0px 13px 24px rgba(43, 53, 65, .2);
+    box-shadow: 0 13px 24px rgba(43, 53, 65, .2);
 }
 .header {
     display: flex;
@@ -82,7 +82,7 @@ h2 {
     width: 0;
     height: 1px;
     background-color: #2B3541;
-    transition: width 0.3s;
+    transition: width .3s;
 }
 .header-item .header-nav a:hover:after {
     width: 100%;
@@ -91,9 +91,14 @@ h2 {
     display: flex;
     gap: 30px;
 }
+header .social-icons a {
+    width: 30px;
+    height: 30px;
+}
 .social-icons img {
-    opacity: 0.8;
-    transition: 0.3s;
+    width: 100%;
+    opacity: .8;
+    transition: .3s;
 }
 .social-icons img:hover {
     transform: scale(1.2);
@@ -207,7 +212,7 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: 0.3s;
+    transition: .3s;
 }
 .event-description {
     padding: 30px;
@@ -216,7 +221,7 @@ h1 {
     margin: 0;
     font-weight: bold;
     font-size: 18px;
-    opacity: 0.6;
+    opacity: .6;
     font-weight: bold;
 }
 h3 {
@@ -227,7 +232,7 @@ h3 {
 .event-btn {
     background-color: #2B3541;
     color: #FBF138;
-    box-shadow: 0px 13px 24px rgba(43, 53, 65, .2);
+    box-shadow: 0 13px 24px rgba(43, 53, 65, .2);
     padding: 20px 37px;
     opacity: 0;
 }
@@ -248,7 +253,7 @@ h3 {
     background-color: #FBF138;
     padding: 14px 21px;
     margin: 0;
-    transition: 0.3s;
+    transition: .3s;
 }
 .event-gradient:hover .event-type {
     opacity: 0;
@@ -301,11 +306,12 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: 0.3s;
+    box-shadow: 0 0 0 rgba(43, 53, 65, 0);
+    transition: .3s;
 }
 .table-item:hover {
-    border: none;
-    box-shadow: 0px 4px 30px rgba(43, 53, 65, .2);
+    border: 1px solid transparent;
+    box-shadow: 0 4px 30px rgba(43, 53, 65, .2);
 }
 .table-item span {
     text-align: right;
@@ -325,7 +331,7 @@ h3 {
     margin-bottom: 15px;
     margin-top: 0;
     line-height: 1.5;
-    transition: max-height 0.3s;
+    transition: max-height .3s;
 }
 .table-item:hover .table-item-desc {
     max-height: 306px;
@@ -333,7 +339,7 @@ h3 {
 #bg-gradient {
     border: none;
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
-    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
+    box-shadow: 0 13px 30px rgba(186, 180, 69, 0.2);
 }
 #bg-gradient span {
     font-weight: 700;
@@ -367,9 +373,9 @@ h3 {
     width: 53px;
     height: 53px;
     top: -19px;
-    left: -22px;
+    left: -35px;
     z-index: -1;
-    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
 }
 .form-item {
     display: grid;
@@ -432,24 +438,50 @@ input:invalid {
 .checkbox:checked + label::before{
     background-color: #2B3541;
     content:'';
-    background-image: url(../img/vector.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     position: absolute;
     left: 0;
     top:calc(50% - 10px);
+    border: 2px solid #2B3541;
+}
+.checkbox:checked + label::after{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all .2s linear;
+    opacity: 1;
+    left: 1px;
+    top: calc(50% - 10px);
+    background-image: url(../img/vector.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .checkbox:not(:checked) + label::before{
     content:'';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     left:0;
     top:calc(50% - 10px);
     background-color: transparent;
     border: 2px solid #2B3541;
+}
+.checkbox:not(:checked) + label::after{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all .2s linear;
+    opacity: 0;
+    left: 1px;
+    top: calc(50% - 10px);
+    background-position: 0 -12px;
+    background-image: url(../img/vector.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 label {
     color: rgba(43, 53, 65, 0.5);
@@ -544,7 +576,7 @@ footer {
     width: 0;
     height: 1px;
     background-color: #2B3541;
-    transition: width 0.3s;
+    transition: width .3s;
 }
 .footer-nav a:hover:after {
     width: 100%;
@@ -573,9 +605,9 @@ footer {
     bottom: 7px;
     right: 129px;
     z-index: -1;
-    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
 }
-footer .social-icons img {
+footer .social-icons a {
     width: 27px;
     height: 27px;
 }
@@ -594,7 +626,7 @@ footer .social-icons img {
     text-decoration: underline;
     color: rgba(43, 53, 65, .4);
     font-size: 14px;
-    transition: 0.3s;
+    transition: .3s;
 }
 .footer-other a:hover {
     color: rgba(43, 53, 65, 1);
@@ -602,9 +634,13 @@ footer .social-icons img {
 
 /* modal */
 
-.burger {
+.header-burger {
     width: 29px;
     height: 22px;
+}
+.burger {
+    width: 100%;
+    height: 100%;
     background-image: url(../img/burger-menu.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -614,7 +650,7 @@ footer .social-icons img {
 }
 #modal {
     background-color: #F3F3F3;
-    box-shadow: 0px 30px 70px rgba(43, 53, 65, .7);
+    box-shadow: 0 30px 70px rgba(43, 53, 65, .7);
     position: absolute;
     top: -500px;
     left: 0;
@@ -622,7 +658,7 @@ footer .social-icons img {
     padding: 32px 10px 16px 10px;
     box-sizing:border-box;
     z-index: 10;
-    transition: 0.4s;
+    transition: .4s;
 }
 #modal .header-nav {
     flex-direction: column;
@@ -673,7 +709,7 @@ footer .social-icons img {
     height: 100vh;
     opacity: 0; 
     pointer-events: none;
-    transition: 0.5s all;
+    transition: .5s all;
 }
 .popup {
     position: absolute;
@@ -684,16 +720,16 @@ footer .social-icons img {
     background-color: #F3F3F3;
     text-align: center;
     padding: 50px 60px;
-    transition: 0.5s all;
+    transition: .5s all;
 }
 .popup-bg.active {
     opacity: 1;
     pointer-events: all;
-    transition: 0.5s all;
+    transition: .5s all;
 }
 .popup.active {
     transform: translate(-50%, -50%) scale(1);
-    transition: 0.5s all;
+    transition: .5s all;
 }
 .close-popup {
     width: 20px;
@@ -734,7 +770,7 @@ footer .social-icons img {
     gap: 20px;
 }
 .form-button:hover {
-    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+    box-shadow: 0 13px 24px rgba(43, 53, 65, 0.2);
 }
 
 /* adaptive */
@@ -935,11 +971,13 @@ footer .social-icons img {
     }
     .social-icons {
         gap: 20px;
-        opacity: 1;
     }
-    .social-icons img {
+    header .social-icons a {
         width: 26px;
         height: 26px;
+    }
+    .social-icons img {
+        opacity: 1;
     }
     .events-box {
         margin-bottom: 80px;
@@ -1028,6 +1066,7 @@ footer .social-icons img {
     .form h2::before {
         width: 31px;
         height: 31px;
+        left: -13px;
     }
     .form-email {
         padding: 24px;
