@@ -390,7 +390,6 @@ input {
     justify-self:stretch;
     padding: 19px;
     border: none;
-    cursor: pointer;
 }
 input:focus {
     outline: none;
@@ -651,7 +650,7 @@ footer .social-icons a {
 #modal {
     background-color: #F3F3F3;
     box-shadow: 0 30px 70px rgba(43, 53, 65, .7);
-    position: absolute;
+    position: fixed;
     top: -500px;
     left: 0;
     right: 0;
@@ -659,6 +658,7 @@ footer .social-icons a {
     box-sizing:border-box;
     z-index: 10;
     transition: .4s;
+
 }
 #modal .header-nav {
     flex-direction: column;
