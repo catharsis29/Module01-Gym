@@ -2,4 +2,4 @@
 
 *Проект выполнен с использованием HTML, CSS, JS*
 
-**Демонстрация сайта** https://catharsis29.github.io/fitness/main.html
+**Демонстрация сайта** https://catharsis29.github.io/Module01-Gym/index.html
